@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,12 +40,10 @@ body {
   line-height: 1.6;
 }
 
-/* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar { width:4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--teal); border-radius:99px; }
 
-/* ─── BG MESH ─── */
 body::before {
   content:'';
   position:fixed; inset:0; z-index:0; pointer-events:none;
@@ -693,7 +691,7 @@ nav {
   font-family:var(--f-serif);
 }
 
-/* ─── SERTIFIKASI ─── */
+/* ─── CERTIFICATION ─── */
 .cert-grid {
   display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:1.2rem;
 }
@@ -764,8 +762,6 @@ nav {
   display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
 }
 
-.contact-left {}
-
 .contact-left p {
   font-size:1rem; color:var(--text2); font-weight:300;
   line-height:1.8; margin-bottom:2rem;
@@ -806,10 +802,7 @@ footer {
   max-width:100%;
 }
 
-.footer-left {
-  font-size:0.8rem; color:var(--text3);
-}
-
+.footer-left { font-size:0.8rem; color:var(--text3); }
 .footer-left strong { color:var(--text2); }
 
 .footer-right {
@@ -859,28 +852,28 @@ footer {
       <span class="nav-logo-badge">QA Analyst</span>
     </div>
     <ul class="nav-links">
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#keahlian">Keahlian</a></li>
-      <li><a href="#proyek">Proyek</a></li>
-      <li><a href="#pengalaman">Pengalaman</a></li>
-      <li><a href="#sertifikasi">Sertifikasi</a></li>
-      <li><a href="#kontak" class="nav-btn">Kontak</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact" class="nav-btn">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="beranda" class="hero">
+<section id="home" class="hero">
   <div class="hero-wrap">
     <div class="hero-left">
-      <div class="hero-tag"><span></span>Terbuka untuk peluang kerja</div>
+      <div class="hero-tag"><span></span>Open to new opportunities</div>
       <h1>
         <span class="name-first">Sanggita</span>
         <span class="name-last">Erinne.</span>
       </h1>
       <p class="hero-role">Quality Assurance Analyst</p>
       <p class="hero-desc">
-        Saya memastikan perangkat lunak bekerja sempurna sebelum sampai ke tangan pengguna. Dengan latar belakang pengembangan fullstack, saya memahami sistem dari dalam — menjadikan pengujian lebih mendalam dan efektif.
+        I make sure software works flawlessly before it reaches the end user. With a fullstack development background, I understand systems from the inside out — making testing deeper and more effective.
       </p>
       <div class="hero-pills">
         <span class="pill">Manual Testing</span>
@@ -892,8 +885,8 @@ footer {
         <span class="pill" style="border-color:rgba(245,200,66,0.4);color:var(--gold);">🏅 LSP Telematika</span>
       </div>
       <div class="hero-cta">
-        <a href="#proyek" class="btn-main">Lihat Proyek →</a>
-        <a href="#kontak" class="btn-outline">Hubungi Saya</a>
+        <a href="#projects" class="btn-main">View Projects →</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
       </div>
     </div>
 
@@ -911,46 +904,46 @@ footer {
         <div class="bio-row">
           <div class="bio-row-icon">🎓</div>
           <div class="bio-row-content">
-            <div class="bio-row-label">Pendidikan</div>
-            <div class="bio-row-value">S1 Sistem Informasi<br>Univ. Duta Bangsa Surakarta</div>
+            <div class="bio-row-label">Education</div>
+            <div class="bio-row-value">B.Sc. Information Systems<br>Univ. Duta Bangsa Surakarta</div>
           </div>
         </div>
         <div class="bio-row">
           <div class="bio-row-icon">🏅</div>
           <div class="bio-row-content">
-            <div class="bio-row-label">Sertifikasi</div>
+            <div class="bio-row-label">Certification</div>
             <div class="bio-row-value" style="color:var(--gold);">Junior Web Programmer<br><span style="color:var(--text2);font-size:0.78rem;">LSP Telematika</span></div>
           </div>
         </div>
         <div class="bio-row">
           <div class="bio-row-icon">📍</div>
           <div class="bio-row-content">
-            <div class="bio-row-label">Lokasi</div>
-            <div class="bio-row-value">Klaten, Jawa Tengah</div>
+            <div class="bio-row-label">Location</div>
+            <div class="bio-row-value">Klaten, Central Java</div>
           </div>
         </div>
         <div class="bio-row">
           <div class="bio-row-icon">💼</div>
           <div class="bio-row-content">
-            <div class="bio-row-label">Pengalaman</div>
-            <div class="bio-row-value">Software Engineer · MAXNET<br>(Agu 2024 – Jan 2025)</div>
+            <div class="bio-row-label">Experience</div>
+            <div class="bio-row-value">Software Engineer · MAXNET<br>(Aug 2024 – Jan 2025)</div>
           </div>
         </div>
         <div class="bio-row">
           <div class="bio-row-icon">⚡</div>
           <div class="bio-row-content">
             <div class="bio-row-label">Status</div>
-            <div class="bio-row-value" style="color:var(--teal);">Aktif Mencari Kerja</div>
+            <div class="bio-row-value" style="color:var(--teal);">Actively Seeking Roles</div>
           </div>
         </div>
       </div>
 
       <div class="test-badge">
         <div class="test-badge-header">Test Suite <span>● LIVE</span></div>
-        <div class="test-row"><span class="test-row-label">Functional Tests</span><span class="t-pass">✓ LULUS</span></div>
-        <div class="test-row"><span class="test-row-label">API Validation</span><span class="t-pass">✓ LULUS</span></div>
-        <div class="test-row"><span class="test-row-label">UI Regression</span><span class="t-pass">✓ LULUS</span></div>
-        <div class="test-row"><span class="test-row-label">Edge Cases</span><span class="t-warn">⚠ TINJAUAN</span></div>
+        <div class="test-row"><span class="test-row-label">Functional Tests</span><span class="t-pass">✓ PASS</span></div>
+        <div class="test-row"><span class="test-row-label">API Validation</span><span class="t-pass">✓ PASS</span></div>
+        <div class="test-row"><span class="test-row-label">UI Regression</span><span class="t-pass">✓ PASS</span></div>
+        <div class="test-row"><span class="test-row-label">Edge Cases</span><span class="t-warn">⚠ REVIEW</span></div>
         <div class="test-row"><span class="test-row-label">Coverage</span><span style="color:var(--text);font-weight:700;">94%</span></div>
       </div>
     </div>
@@ -959,68 +952,68 @@ footer {
 
 <div class="hr"></div>
 
-<!-- TENTANG / BIODATA -->
-<section id="tentang" class="section">
-  <div class="sec-label">01 — Tentang Saya</div>
-  <h2 class="sec-title">Profil & <span class="hl">Biodata</span></h2>
+<!-- ABOUT / BIODATA -->
+<section id="about" class="section">
+  <div class="sec-label">01 — About Me</div>
+  <h2 class="sec-title">Profile & <span class="hl">Background</span></h2>
 
   <div class="bio-section">
     <div class="bio-info-card fi">
-      <h3>Informasi Personal</h3>
+      <h3>Personal Information</h3>
       <div class="bio-detail-row">
-        <span class="bio-detail-label">Nama Lengkap</span>
+        <span class="bio-detail-label">Full Name</span>
         <span class="bio-detail-val">Sanggita Erinne Widyastami Suwito</span>
       </div>
       <div class="bio-detail-row">
-        <span class="bio-detail-label">Pendidikan</span>
-        <span class="bio-detail-val">S1 Sistem Informasi<br>Universitas Duta Bangsa Surakarta</span>
+        <span class="bio-detail-label">Education</span>
+        <span class="bio-detail-val">B.Sc. Information Systems<br>Universitas Duta Bangsa Surakarta</span>
       </div>
       <div class="bio-detail-row">
-        <span class="bio-detail-label">Lokasi</span>
-        <span class="bio-detail-val">Klaten, Jawa Tengah, Indonesia</span>
+        <span class="bio-detail-label">Location</span>
+        <span class="bio-detail-val">Klaten, Central Java, Indonesia</span>
       </div>
       <div class="bio-detail-row">
         <span class="bio-detail-label">Email</span>
         <span class="bio-detail-val">sanggita82@gmail.com</span>
       </div>
       <div class="bio-detail-row">
-        <span class="bio-detail-label">Telepon</span>
+        <span class="bio-detail-label">Phone</span>
         <span class="bio-detail-val">+62 895-3911-6933</span>
       </div>
       <div class="bio-detail-row">
         <span class="bio-detail-label">Status</span>
-        <span class="bio-detail-val" style="color:var(--teal);">Aktif mencari peluang kerja</span>
+        <span class="bio-detail-val" style="color:var(--teal);">Actively seeking opportunities</span>
       </div>
       <div class="bio-detail-row">
-        <span class="bio-detail-label">Sertifikasi</span>
+        <span class="bio-detail-label">Certification</span>
         <span class="bio-detail-val"><span style="color:var(--gold);font-weight:600;">🏅 Junior Web Programmer</span><br>LSP Telematika</span>
       </div>
     </div>
 
     <div class="bio-highlight fi">
       <div>
-        <div class="bio-highlight-title">Statistik</div>
+        <div class="bio-highlight-title">At a Glance</div>
         <div class="stat-grid">
           <div class="stat-item">
             <div class="stat-num">3+</div>
-            <div class="stat-lbl">Proyek Diuji</div>
+            <div class="stat-lbl">Projects Tested</div>
           </div>
           <div class="stat-item">
             <div class="stat-num">6</div>
-            <div class="stat-lbl">Bulan Industri</div>
+            <div class="stat-lbl">Months Industry</div>
           </div>
           <div class="stat-item">
             <div class="stat-num">5+</div>
-            <div class="stat-lbl">Stack Dikuasai</div>
+            <div class="stat-lbl">Stacks Mastered</div>
           </div>
           <div class="stat-item">
             <div class="stat-num">94%</div>
-            <div class="stat-lbl">Rata‑rata Coverage</div>
+            <div class="stat-lbl">Avg. Coverage</div>
           </div>
         </div>
       </div>
       <div class="bio-quote">
-        Latar belakang fullstack memberiku keunggulan sebagai QA — saya mengerti cara kerja sistem dari dalam, sehingga bisa menemukan celah yang tidak terlihat dari luar.
+        My fullstack background gives me an edge as a QA — I understand how systems work from the inside, which lets me find gaps that aren't visible from the outside.
       </div>
     </div>
   </div>
@@ -1028,87 +1021,87 @@ footer {
 
 <div class="hr"></div>
 
-<!-- KEAHLIAN -->
-<section id="keahlian" class="section">
-  <div class="sec-label">02 — Keahlian</div>
-  <h2 class="sec-title">Bidang <span class="hl">Kompetensi</span></h2>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="sec-label">02 — Skills</div>
+  <h2 class="sec-title">Areas of <span class="hl">Expertise</span></h2>
 
   <div class="skills-grid">
     <div class="sk-card fi">
       <div class="sk-icon">🔍</div>
-      <h3>QA & Pengujian</h3>
-      <div class="sk-card-sub">Kompetensi Utama</div>
+      <h3>QA & Testing</h3>
+      <div class="sk-card-sub">Core Competency</div>
       <ul class="sk-list">
-        <li>Manual Testing & Desain Test Case</li>
-        <li>Pelaporan Bug & Analisis Akar Masalah</li>
+        <li>Manual Testing & Test Case Design</li>
+        <li>Bug Reporting & Root Cause Analysis</li>
         <li>Regression & Smoke Testing</li>
         <li>User Acceptance Testing (UAT)</li>
-        <li>Rencana Uji & Dokumentasi</li>
+        <li>Test Plans & Documentation</li>
       </ul>
     </div>
 
     <div class="sk-card fi">
       <div class="sk-icon">⚙️</div>
-      <h3>Alat Pengujian</h3>
-      <div class="sk-card-sub">Tools & Framework</div>
+      <h3>Testing Tools</h3>
+      <div class="sk-card-sub">Tools & Frameworks</div>
       <ul class="sk-list">
-        <li>Postman — Pengujian API</li>
-        <li>Jira / Trello — Pelacakan Bug</li>
-        <li>Selenium (Dasar)</li>
+        <li>Postman — API Testing</li>
+        <li>Jira / Trello — Bug Tracking</li>
+        <li>Selenium (Basic)</li>
         <li>Browser DevTools</li>
-        <li>Google Sheets — Matriks Uji</li>
+        <li>Google Sheets — Test Matrices</li>
       </ul>
     </div>
 
     <div class="sk-card fi">
       <div class="sk-icon">⚛️</div>
-      <h3>Pengetahuan Frontend</h3>
-      <div class="sk-card-sub">Pemahaman Teknis</div>
+      <h3>Frontend Knowledge</h3>
+      <div class="sk-card-sub">Technical Understanding</div>
       <ul class="sk-list">
-        <li>React.js — pemahaman mendalam</li>
+        <li>React.js — in-depth understanding</li>
         <li>HTML5 & CSS3</li>
         <li>JavaScript (ES6+)</li>
-        <li>Pengujian Responsif & Lintas Browser</li>
-        <li>Validasi UI/UX</li>
+        <li>Responsive & Cross-Browser Testing</li>
+        <li>UI/UX Validation</li>
       </ul>
     </div>
 
     <div class="sk-card fi">
       <div class="sk-icon">🛠️</div>
-      <h3>Pengetahuan Backend</h3>
-      <div class="sk-card-sub">Kedalaman Pengujian Sistem</div>
+      <h3>Backend Knowledge</h3>
+      <div class="sk-card-sub">System Testing Depth</div>
       <ul class="sk-list">
         <li>Laravel & PHP</li>
-        <li>MySQL — Pengujian Query & Data</li>
-        <li>Validasi RESTful API</li>
-        <li>Pengujian Alur Autentikasi</li>
-        <li>Verifikasi Integritas Data</li>
+        <li>MySQL — Query & Data Testing</li>
+        <li>RESTful API Validation</li>
+        <li>Authentication Flow Testing</li>
+        <li>Data Integrity Verification</li>
       </ul>
     </div>
 
     <div class="sk-card fi">
       <div class="sk-icon">📋</div>
-      <h3>Dokumentasi</h3>
-      <div class="sk-card-sub">Pelaporan & Komunikasi</div>
+      <h3>Documentation</h3>
+      <div class="sk-card-sub">Reporting & Communication</div>
       <ul class="sk-list">
-        <li>Penulisan Teknis</li>
-        <li>Penulisan Laporan Bug</li>
-        <li>Laporan Ringkasan Pengujian</li>
-        <li>Komunikasi Profesional</li>
-        <li>Kemampuan Editorial & Review</li>
+        <li>Technical Writing</li>
+        <li>Bug Report Writing</li>
+        <li>Test Summary Reports</li>
+        <li>Professional Communication</li>
+        <li>Editorial & Review Skills</li>
       </ul>
     </div>
 
     <div class="sk-card fi">
       <div class="sk-icon">🎨</div>
-      <h3>Alat Pendukung</h3>
-      <div class="sk-card-sub">Produktivitas & Desain</div>
+      <h3>Support Tools</h3>
+      <div class="sk-card-sub">Productivity & Design</div>
       <ul class="sk-list">
-        <li>Canva & Figma (Review Dasar)</li>
+        <li>Canva & Figma (Basic Review)</li>
         <li>Microsoft Office Suite</li>
         <li>Google Workspace</li>
-        <li>Tinjauan Prototipe</li>
-        <li>Analisis Kebutuhan</li>
+        <li>Prototype Review</li>
+        <li>Requirements Analysis</li>
       </ul>
     </div>
   </div>
@@ -1116,17 +1109,17 @@ footer {
 
 <div class="hr"></div>
 
-<!-- PROYEK -->
-<section id="proyek" class="section">
-  <div class="sec-label">03 — Proyek</div>
-  <h2 class="sec-title">Studi Kasus <span class="hl">QA</span></h2>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="sec-label">03 — Projects</div>
+  <h2 class="sec-title">QA <span class="hl">Case Studies</span></h2>
 
   <div class="projects-grid">
     <div class="proj-card fi">
       <div class="proj-num">01</div>
       <div class="proj-main">
-        <h3>Sistem Informasi Penjualan Apotek</h3>
-        <p>Pengujian menyeluruh aplikasi manajemen apotek berbasis web — mencakup alur penjualan, pembaruan stok real-time, dan akurasi laporan keuangan dengan interface yang ramah pengguna.</p>
+        <h3>Pharmacy Sales Information System</h3>
+        <p>Comprehensive testing of a web-based pharmacy management application — covering sales workflows, real-time stock updates, and financial report accuracy with a user-friendly interface.</p>
         <div class="proj-tags">
           <span class="proj-tag">Laravel</span>
           <span class="proj-tag">React.js</span>
@@ -1137,14 +1130,14 @@ footer {
       <div class="proj-qa">
         <div class="proj-qa-title">QA Checklist</div>
         <ul class="qa-list">
-          <li><span class="pass">✓</span>Alur fungsional transaksi penjualan</li>
-          <li><span class="pass">✓</span>Sinkronisasi & akurasi stok obat</li>
-          <li><span class="pass">✓</span>Validasi integritas data laporan</li>
-          <li><span class="pass">✓</span>Kompatibilitas UI lintas browser</li>
+          <li><span class="pass">✓</span>Sales transaction functional flow</li>
+          <li><span class="pass">✓</span>Stock sync & medication accuracy</li>
+          <li><span class="pass">✓</span>Report data integrity validation</li>
+          <li><span class="pass">✓</span>Cross-browser UI compatibility</li>
         </ul>
       </div>
       <div class="proj-status">
-        <div class="status-badge">Selesai</div>
+        <div class="status-badge">Completed</div>
         <div class="status-dot"></div>
       </div>
     </div>
@@ -1152,8 +1145,8 @@ footer {
     <div class="proj-card fi">
       <div class="proj-num">02</div>
       <div class="proj-main">
-        <h3>Sistem Pendaftaran Pelanggan MAXNET</h3>
-        <p>Validasi QA platform pendaftaran pelanggan ISP dengan fitur pengukuran jarak berbasis geolokasi menggunakan Leaflet untuk menentukan tiang Wi-Fi terdekat secara otomatis.</p>
+        <h3>MAXNET Customer Registration System</h3>
+        <p>QA validation of an ISP customer registration platform featuring geolocation-based distance measurement using Leaflet to automatically identify the nearest Wi-Fi pole.</p>
         <div class="proj-tags">
           <span class="proj-tag">Laravel</span>
           <span class="proj-tag">React.js</span>
@@ -1164,14 +1157,14 @@ footer {
       <div class="proj-qa">
         <div class="proj-qa-title">QA Checklist</div>
         <ul class="qa-list">
-          <li><span class="pass">✓</span>Pengujian akurasi geolokasi peta</li>
-          <li><span class="pass">✓</span>Validasi form & kasus tepi</li>
-          <li><span class="pass">✓</span>Pemeriksaan integritas respons API</li>
-          <li><span class="pass">✓</span>Pengujian mobile & responsif</li>
+          <li><span class="pass">✓</span>Geolocation map accuracy testing</li>
+          <li><span class="pass">✓</span>Form validation & edge cases</li>
+          <li><span class="pass">✓</span>API response integrity checks</li>
+          <li><span class="pass">✓</span>Mobile & responsive testing</li>
         </ul>
       </div>
       <div class="proj-status">
-        <div class="status-badge">Selesai</div>
+        <div class="status-badge">Completed</div>
         <div class="status-dot"></div>
       </div>
     </div>
@@ -1179,8 +1172,8 @@ footer {
     <div class="proj-card fi">
       <div class="proj-num">03</div>
       <div class="proj-main">
-        <h3>Sistem Konsultasi & Jasa Perpajakan</h3>
-        <p>Pengujian sistem berbasis web untuk pengelolaan layanan konsultasi dan tagihan jasa perpajakan. Fokus pada keamanan data klien, kelengkapan alur kerja, dan validasi kalkulasi.</p>
+        <h3>Tax Consulting & Services System</h3>
+        <p>Testing of a web-based system for managing tax consultation services and billing workflows. Focus on client data security, workflow completeness, and calculation validation.</p>
         <div class="proj-tags">
           <span class="proj-tag">Laravel</span>
           <span class="proj-tag">MySQL</span>
@@ -1190,14 +1183,14 @@ footer {
       <div class="proj-qa">
         <div class="proj-qa-title">QA Checklist</div>
         <ul class="qa-list">
-          <li><span class="pass">✓</span>Integritas data klien terverifikasi</li>
-          <li><span class="pass">✓</span>Alur konsultasi end-to-end</li>
-          <li><span class="pass">✓</span>Validasi kalkulasi tagihan</li>
-          <li><span class="warn">⚠</span>Audit keamanan dalam tinjauan</li>
+          <li><span class="pass">✓</span>Client data integrity verified</li>
+          <li><span class="pass">✓</span>End-to-end consultation flow</li>
+          <li><span class="pass">✓</span>Billing calculation validation</li>
+          <li><span class="warn">⚠</span>Security audit under review</li>
         </ul>
       </div>
       <div class="proj-status">
-        <div class="status-badge">Selesai</div>
+        <div class="status-badge">Completed</div>
         <div class="status-dot"></div>
       </div>
     </div>
@@ -1206,60 +1199,60 @@ footer {
 
 <div class="hr"></div>
 
-<!-- PENGALAMAN -->
-<section id="pengalaman" class="section">
-  <div class="sec-label">04 — Pengalaman</div>
-  <h2 class="sec-title">Riwayat <span class="hl">Karier</span></h2>
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="sec-label">04 — Experience</div>
+  <h2 class="sec-title">Career <span class="hl">History</span></h2>
 
   <div class="exp-layout fi">
     <div class="exp-sidebar">
-      <div class="exp-sidebar-label">Posisi</div>
+      <div class="exp-sidebar-label">Positions</div>
       <div class="exp-tab active" onclick="showTab('e1',this)">
         <div class="exp-tab-role">Software Engineer</div>
-        <div class="exp-tab-year">Agu 2024 – Jan 2025</div>
+        <div class="exp-tab-year">Aug 2024 – Jan 2025</div>
       </div>
       <div class="exp-tab" onclick="showTab('e2',this)">
-        <div class="exp-tab-role">Ketua Redaktur</div>
+        <div class="exp-tab-role">Editor-in-Chief</div>
         <div class="exp-tab-year">2023 – 2024</div>
       </div>
       <div class="exp-tab" onclick="showTab('e3',this)">
-        <div class="exp-tab-role">Anggota Div. Humas</div>
+        <div class="exp-tab-role">PR Division Member</div>
         <div class="exp-tab-year">2023 – 2024</div>
       </div>
     </div>
 
     <div class="exp-content">
       <div class="exp-panel active" id="e1">
-        <div class="exp-period">Agustus 2024 — Januari 2025</div>
+        <div class="exp-period">August 2024 — January 2025</div>
         <h3>Software Engineer</h3>
         <div class="exp-company">PT. Lingkar Kabel Telekomunikasi — MAXNET · Klaten</div>
         <ul class="exp-ul">
-          <li>Mengembangkan dan menguji sistem web pendaftaran pelanggan menggunakan React.js dan Laravel — mengelola siklus penuh QA mulai dari pembuatan test case hingga penyelesaian bug.</li>
-          <li>Melakukan pengujian fungsional, regresi, dan integrasi pada setiap fitur baru sebelum deployment ke production.</li>
-          <li>Menangani insiden produksi dan memvalidasi perbaikan terhadap kriteria penerimaan yang telah ditetapkan.</li>
-          <li>Memantau stabilitas sistem dan mendokumentasikan isu berulang untuk mendorong perbaikan berkelanjutan.</li>
+          <li>Developed and tested a web-based customer registration system using React.js and Laravel — managing the full QA cycle from test case creation through to bug resolution.</li>
+          <li>Conducted functional, regression, and integration testing on every new feature prior to production deployment.</li>
+          <li>Handled production incidents and validated fixes against pre-defined acceptance criteria.</li>
+          <li>Monitored system stability and documented recurring issues to drive continuous improvement.</li>
         </ul>
       </div>
 
       <div class="exp-panel" id="e2">
         <div class="exp-period">2023 — 2024</div>
-        <h3>Ketua Redaktur</h3>
-        <div class="exp-company">Pers Mahasiswa — Universitas Duta Bangsa Surakarta</div>
+        <h3>Editor-in-Chief</h3>
+        <div class="exp-company">Student Press — Universitas Duta Bangsa Surakarta</div>
         <ul class="exp-ul">
-          <li>Menerapkan prinsip quality control pada pekerjaan editorial — meninjau setiap tulisan untuk akurasi, kejelasan, dan konsistensi sebelum publikasi.</li>
-          <li>Memimpin tim penulis dengan menerapkan proses review terstruktur, serupa dengan alur sign-off dalam QA.</li>
-          <li>Mengelola pipeline editorial secara menyeluruh mulai dari perencanaan konten hingga distribusi akhir.</li>
+          <li>Applied quality control principles to editorial work — reviewing every piece for accuracy, clarity, and consistency before publication.</li>
+          <li>Led a team of writers using a structured review process, mirroring QA sign-off workflows.</li>
+          <li>Managed the full editorial pipeline from content planning through to final distribution.</li>
         </ul>
       </div>
 
       <div class="exp-panel" id="e3">
         <div class="exp-period">2023 — 2024</div>
-        <h3>Anggota Divisi Humas Internal</h3>
-        <div class="exp-company">BEM Fakultas Ilmu Komputer — Universitas Duta Bangsa</div>
+        <h3>Internal Public Relations Division Member</h3>
+        <div class="exp-company">Faculty Student Executive Board — Universitas Duta Bangsa</div>
         <ul class="exp-ul">
-          <li>Mengelola komunikasi internal fakultas dengan memastikan akurasi informasi dan distribusi yang tepat waktu.</li>
-          <li>Mendukung pelaksanaan kegiatan melalui koordinasi publikasi dan kolaborasi lintas organisasi.</li>
-          <li>Memperkuat hubungan antarorganisasi melalui praktik komunikasi yang terstruktur.</li>
+          <li>Managed faculty-wide internal communications, ensuring information accuracy and timely distribution.</li>
+          <li>Supported events through publication coordination and cross-organizational collaboration.</li>
+          <li>Strengthened inter-organizational relationships through structured communication practices.</li>
         </ul>
       </div>
     </div>
@@ -1268,10 +1261,10 @@ footer {
 
 <div class="hr"></div>
 
-<!-- SERTIFIKASI -->
-<section id="sertifikasi" class="section">
-  <div class="sec-label">05 — Sertifikasi</div>
-  <h2 class="sec-title">Sertifikat <span class="hl">Profesi</span></h2>
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+  <div class="sec-label">05 — Certifications</div>
+  <h2 class="sec-title">Professional <span class="hl">Credentials</span></h2>
 
   <div class="cert-grid">
     <div class="cert-card fi">
@@ -1280,8 +1273,8 @@ footer {
         <div class="cert-name">Junior Web Programmer</div>
         <div class="cert-issuer">Lembaga Sertifikasi Profesi Telematika (LSP Telematika)</div>
         <div class="cert-meta">
-          <span class="cert-badge">Sertifikasi Resmi</span>
-          <span class="cert-badge cert-badge-gold">Terverifikasi</span>
+          <span class="cert-badge">Official Certification</span>
+          <span class="cert-badge cert-badge-gold">Verified</span>
         </div>
       </div>
     </div>
@@ -1290,15 +1283,15 @@ footer {
 
 <div class="hr"></div>
 
-<!-- KONTAK -->
-<section id="kontak" class="section">
-  <div class="sec-label">06 — Kontak</div>
-  <h2 class="sec-title">Mari <span class="hl">Berkolaborasi</span></h2>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="sec-label">06 — Contact</div>
+  <h2 class="sec-title">Let's <span class="hl">Collaborate</span></h2>
 
   <div class="contact-wrap">
     <div class="contact-left fi">
-      <p>Mencari QA Analyst yang memahami sistem dari sisi developer? Saya terbuka untuk posisi tetap, magang, maupun proyek QA freelance. Jangan ragu untuk menghubungi saya!</p>
-      <a href="mailto:sanggita82@gmail.com" class="btn-main" style="display:inline-flex;">Kirim Email →</a>
+      <p>Looking for a QA Analyst who understands systems from a developer's perspective? I'm open to full-time positions, internships, and freelance QA projects. Don't hesitate to reach out!</p>
+      <a href="mailto:sanggita82@gmail.com" class="btn-main" style="display:inline-flex;">Send an Email →</a>
     </div>
 
     <div class="contact-grid fi">
@@ -1309,7 +1302,7 @@ footer {
       </a>
       <a href="tel:+6289539116933" class="c-item">
         <div class="c-icon">📱</div>
-        <div class="c-label">WhatsApp / Telepon</div>
+        <div class="c-label">WhatsApp / Phone</div>
         <div class="c-val">+62 895-3911-6933</div>
       </a>
       <a href="https://linkedin.com/in/sanggita-erinne" target="_blank" class="c-item">
@@ -1327,12 +1320,11 @@ footer {
 </section>
 
 <footer>
-  <div class="footer-left">© 2025 <strong>Sanggita Erinne Widyastami Suwito</strong> · Klaten, Jawa Tengah</div>
-  <div class="footer-right">QA Analyst · S1 Sistem Informasi</div>
+  <div class="footer-left">© 2025 <strong>Sanggita Erinne Widyastami Suwito</strong> · Klaten, Central Java</div>
+  <div class="footer-right">QA Analyst · B.Sc. Information Systems</div>
 </footer>
 
 <script>
-  // Tab switcher
   function showTab(id, el) {
     document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.exp-tab').forEach(t => t.classList.remove('active'));
@@ -1340,7 +1332,6 @@ footer {
     el.classList.add('active');
   }
 
-  // Fade-in observer
   const obs = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -1352,7 +1343,6 @@ footer {
 
   document.querySelectorAll('.fi').forEach(el => obs.observe(el));
 
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
@@ -1361,7 +1351,6 @@ footer {
     });
   });
 
-  // Nav active
   window.addEventListener('scroll', () => {
     let cur = '';
     document.querySelectorAll('section[id], div[id]').forEach(s => {
