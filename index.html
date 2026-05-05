@@ -169,28 +169,36 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);
 .sk-list li{font-size:0.83rem;color:var(--text2);font-weight:400;display:flex;align-items:center;gap:0.55rem;line-height:1.4;}
 .sk-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--teal);flex-shrink:0;}
 
-/* PROJECTS */
+/* SECTION TABS */
+.section-tabs{display:flex;gap:0.5rem;margin-bottom:2.5rem;}
+.s-tab{font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  padding:0.5rem 1.2rem;border-radius:99px;border:1px solid var(--line2);color:var(--text2);
+  cursor:pointer;transition:all 0.2s;background:transparent;}
+.s-tab:hover{border-color:var(--teal);color:var(--teal);}
+.s-tab.active{background:var(--teal);border-color:var(--teal);color:var(--bg);}
+
+/* QA CASE STUDIES */
 .projects-stack{display:flex;flex-direction:column;gap:1.4rem;}
 .pj{background:var(--bg1);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
   transition:border-color 0.25s,box-shadow 0.25s;}
 .pj:hover{border-color:rgba(0,201,167,0.28);box-shadow:0 10px 36px rgba(0,0,0,0.32);}
 .pj-featured{border-color:rgba(0,201,167,0.2);background:linear-gradient(160deg,var(--bg1) 0%,rgba(0,201,167,0.035) 100%);}
 
-/* top bar */
 .pj-top{display:flex;align-items:center;gap:1rem;padding:1rem 1.5rem;border-bottom:1px solid var(--line);background:var(--bg2);}
 .pj-num{font-size:0.7rem;font-weight:800;color:var(--text3);letter-spacing:0.06em;flex-shrink:0;}
 .pj-title{font-size:0.98rem;font-weight:700;color:var(--white);flex:1;line-height:1.3;}
+.pj-company{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--text2);background:var(--bg3);border:1px solid var(--line2);
+  padding:0.22rem 0.8rem;border-radius:99px;flex-shrink:0;}
 .pj-pill{font-size:0.6rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;
   color:var(--teal);background:var(--teal-dim);border:1px solid rgba(0,201,167,0.22);
   padding:0.22rem 0.7rem;border-radius:99px;flex-shrink:0;display:flex;align-items:center;gap:0.4rem;}
 .pj-pill::before{content:'';width:5px;height:5px;background:var(--teal);border-radius:50%;animation:blink 2s infinite;}
 
-/* body two-col */
 .pj-body{display:grid;grid-template-columns:1fr 300px;}
 .pj-left{padding:1.4rem 1.5rem;border-right:1px solid var(--line);}
 .pj-right{padding:1.4rem 1.4rem;display:flex;flex-direction:column;gap:1.2rem;}
 
-/* platform badges */
 .platform-row{display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.85rem;}
 .pb{font-size:0.64rem;font-weight:700;letter-spacing:0.04em;padding:0.22rem 0.65rem;border-radius:6px;
   display:inline-flex;align-items:center;gap:0.3rem;}
@@ -204,14 +212,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);
   border:1px solid var(--line);padding:0.2rem 0.58rem;border-radius:5px;transition:all 0.2s;}
 .pj-tag:hover{color:var(--teal);border-color:rgba(0,201,167,0.3);}
 
-/* panel helpers */
 .panel-label{font-size:0.62rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--text3);margin-bottom:0.65rem;}
 .checklist{list-style:none;display:flex;flex-direction:column;gap:0.45rem;}
 .checklist li{font-size:0.8rem;color:var(--text2);display:flex;align-items:flex-start;gap:0.5rem;line-height:1.45;}
 .ck-ok{color:var(--teal);font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px;}
 .ck-wn{color:var(--gold);font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px;}
 
-/* bug table */
 .bug-tbl{background:var(--bg2);border:1px solid var(--line);border-radius:var(--rs);overflow:hidden;}
 .bug-tbl-hd{padding:0.42rem 0.8rem;background:var(--bg3);border-bottom:1px solid var(--line);
   font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);}
@@ -227,6 +233,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);
 .bv-y{color:var(--gold);}
 .bv-g{color:var(--teal);}
 
+/* DEV PROJECTS */
+.dev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.2rem;}
+.dev-card{background:var(--bg1);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:transform 0.25s,border-color 0.25s,box-shadow 0.25s;display:flex;flex-direction:column;}
+.dev-card:hover{border-color:rgba(0,201,167,0.28);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,0.32);}
+.dev-card-head{background:var(--bg2);padding:1.2rem 1.5rem;border-bottom:1px solid var(--line);
+  display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;}
+.dev-card-title{font-size:0.95rem;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:0.22rem;}
+.dev-card-year{font-size:0.65rem;font-weight:700;color:var(--text3);flex-shrink:0;margin-top:2px;}
+.dev-card-body{padding:1.3rem 1.5rem;flex:1;display:flex;flex-direction:column;gap:1rem;}
+.dev-card-desc{font-size:0.84rem;color:var(--text2);font-weight:300;line-height:1.75;}
+.dev-stack{display:flex;flex-wrap:wrap;gap:0.38rem;}
+.stack-tag{font-size:0.63rem;font-weight:700;letter-spacing:0.05em;padding:0.2rem 0.6rem;border-radius:5px;}
+.st-laravel{color:#f9a8d4;background:rgba(249,168,212,0.1);border:1px solid rgba(249,168,212,0.2);}
+.st-react{color:var(--blue);background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);}
+.st-mysql{color:#fbbf24;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.2);}
+.st-leaflet{color:#86efac;background:rgba(134,239,172,0.1);border:1px solid rgba(134,239,172,0.2);}
+.dev-feats{list-style:none;display:flex;flex-direction:column;gap:0.4rem;border-top:1px solid var(--line);padding-top:0.85rem;}
+.dev-feats li{font-size:0.8rem;color:var(--text2);display:flex;align-items:flex-start;gap:0.5rem;line-height:1.45;}
+.dev-feats li::before{content:'▸';color:var(--teal);flex-shrink:0;font-size:0.8rem;}
+
 /* EXPERIENCE */
 .exp-wrap{display:grid;grid-template-columns:210px 1fr;background:var(--bg1);
   border:1px solid var(--line);border-radius:var(--r);overflow:hidden;}
@@ -238,6 +265,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);
 .exp-tab.active{background:var(--teal-dim);border-left-color:var(--teal);}
 .exp-tab-role{font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:0.12rem;}
 .exp-tab.active .exp-tab-role{color:var(--teal);}
+.exp-tab-co{font-size:0.68rem;color:var(--text2);margin-bottom:0.08rem;}
 .exp-tab-yr{font-size:0.65rem;color:var(--text3);}
 .exp-content{padding:2.2rem 2.4rem;}
 .exp-panel{display:none;}
@@ -246,6 +274,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);
 .exp-period{font-size:0.67rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.45rem;}
 .exp-panel h3{font-size:1.55rem;font-weight:800;color:var(--white);letter-spacing:-0.03em;margin-bottom:0.25rem;}
 .exp-co{font-size:0.85rem;color:var(--text2);margin-bottom:1.6rem;}
+.exp-type-badge{display:inline-flex;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;
+  text-transform:uppercase;padding:0.18rem 0.65rem;border-radius:99px;margin-bottom:1.2rem;}
+.etb-work{background:rgba(0,201,167,0.12);color:var(--teal);border:1px solid rgba(0,201,167,0.22);}
+.etb-org{background:rgba(96,165,250,0.12);color:var(--blue);border:1px solid rgba(96,165,250,0.22);}
 .exp-ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
 .exp-ul li{font-size:0.88rem;color:var(--text2);font-weight:300;display:flex;align-items:flex-start;gap:0.75rem;line-height:1.65;}
 .exp-ul li::before{content:'▸';color:var(--teal);flex-shrink:0;font-size:0.88rem;}
@@ -260,7 +292,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);
 .cert-ico{width:50px;height:50px;border-radius:11px;flex-shrink:0;background:var(--teal-dim);
   border:1px solid rgba(0,201,167,0.22);display:flex;align-items:center;justify-content:center;font-size:1.55rem;}
 .cert-name{font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;}
-.cert-issuer{font-size:0.78rem;color:var(--teal);font-weight:500;margin-bottom:0.6rem;}
+.cert-issuer{font-size:0.78rem;color:var(--teal);font-weight:500;margin-bottom:0.3rem;}
+.cert-period{font-size:0.72rem;color:var(--text3);margin-bottom:0.6rem;}
 .cert-tags{display:flex;gap:0.5rem;flex-wrap:wrap;}
 .ct{font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.22rem 0.65rem;border-radius:99px;}
 .ct-teal{background:var(--teal-dim);color:var(--teal);border:1px solid rgba(0,201,167,0.22);}
@@ -298,6 +331,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
   .exp-tab.active{border-left-color:transparent;border-bottom-color:var(--teal);}
   .about-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .dev-grid{grid-template-columns:1fr;}
 }
 @media(max-width:640px){
   .nav-links li:not(:last-child){display:none;}
@@ -307,6 +341,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
   footer{flex-direction:column;gap:0.5rem;text-align:center;}
   .wrap{padding:0 1.25rem;}
   .pj-top{flex-wrap:wrap;gap:0.5rem;}
+  .section-tabs{flex-wrap:wrap;}
 }
 </style>
 </head>
@@ -333,8 +368,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
       <div>
         <div class="hero-tag"><i></i>Open to new opportunities</div>
         <h1 class="hero-name">Sanggita<br><span>Erinne.</span></h1>
-        <p class="hero-role">Quality Assurance Analyst</p>
-        <p class="hero-desc">I make sure software works flawlessly before it reaches the end user. With a fullstack development background, I understand systems from the inside out — making testing deeper and more effective.</p>
+        <p class="hero-role">Quality Assurance Analyst &amp; System Analyst</p>
+        <p class="hero-desc">I make sure software works flawlessly before it reaches the end user. With a fullstack development background and a GPA of 3.93, I understand systems from the inside out — making testing deeper and more effective.</p>
         <div class="pills">
           <span class="pill">Manual Testing</span>
           <span class="pill">API Testing</span>
@@ -357,19 +392,19 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
           <div class="pc-badge">QA Analyst</div>
         </div>
         <div class="pc-rows">
-          <div class="pc-row"><div class="pc-icon">🎓</div><div><div class="pc-label">Education</div><div class="pc-val">B.Sc. Information Systems<br>Univ. Duta Bangsa Surakarta</div></div></div>
-          <div class="pc-row"><div class="pc-icon">🏅</div><div><div class="pc-label">Certification</div><div class="pc-val" style="color:var(--gold)">Junior Web Programmer<br><span style="color:var(--text2);font-size:.75rem">LSP Telematika</span></div></div></div>
+          <div class="pc-row"><div class="pc-icon">🎓</div><div><div class="pc-label">Education</div><div class="pc-val">B.Sc. Information Systems<br>Univ. Duta Bangsa Surakarta · GPA 3.93</div></div></div>
+          <div class="pc-row"><div class="pc-icon">🏅</div><div><div class="pc-label">Certification</div><div class="pc-val" style="color:var(--gold)">Junior Web Programmer<br><span style="color:var(--text2);font-size:.75rem">LSP Telematika · 2025–2028</span></div></div></div>
           <div class="pc-row"><div class="pc-icon">📍</div><div><div class="pc-label">Location</div><div class="pc-val">Klaten, Central Java</div></div></div>
-          <div class="pc-row"><div class="pc-icon">💼</div><div><div class="pc-label">Experience</div><div class="pc-val">Software Engineer · MAXNET<br>(Aug 2024 – Jan 2025)</div></div></div>
-          <div class="pc-row"><div class="pc-icon">⚡</div><div><div class="pc-label">Status</div><div class="pc-val c-teal">Actively Seeking Roles</div></div></div>
+          <div class="pc-row"><div class="pc-icon">💼</div><div><div class="pc-label">Current Role</div><div class="pc-val">QA Analyst · Fingerspot.io<br><span style="color:var(--teal);font-size:.75rem">Jan 2026 – Present</span></div></div></div>
+          <div class="pc-row"><div class="pc-icon">⚡</div><div><div class="pc-label">Status</div><div class="pc-val c-teal">Open to Opportunities</div></div></div>
         </div>
         <div class="pc-suite">
           <div class="pc-suite-hd">Test Suite <em>● LIVE</em></div>
           <div class="pc-suite-row"><span>Functional Tests</span><span class="t-pass">✓ PASS</span></div>
           <div class="pc-suite-row"><span>API Validation</span><span class="t-pass">✓ PASS</span></div>
           <div class="pc-suite-row"><span>UI Regression</span><span class="t-pass">✓ PASS</span></div>
-          <div class="pc-suite-row"><span>Edge Cases</span><span class="t-warn">⚠ REVIEW</span></div>
-          <div class="pc-suite-row"><span>Coverage</span><span style="color:var(--text);font-weight:700">94%</span></div>
+          <div class="pc-suite-row"><span>Cross-Platform</span><span class="t-pass">✓ PASS</span></div>
+          <div class="pc-suite-row"><span>Offline Fallback</span><span class="t-warn">⚠ REVIEW</span></div>
         </div>
       </div>
     </div>
@@ -387,21 +422,21 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
       <div class="card fi">
         <div class="card-title">Personal Information</div>
         <div class="info-row"><span class="info-label">Full Name</span><span class="info-val">Sanggita Erinne Widyastami Suwito</span></div>
-        <div class="info-row"><span class="info-label">Education</span><span class="info-val">B.Sc. Information Systems<br>Universitas Duta Bangsa Surakarta</span></div>
+        <div class="info-row"><span class="info-label">Education</span><span class="info-val">B.Sc. Information Systems · GPA 3.93 / 4.00<br><span style="color:var(--text3);font-size:.8rem">Universitas Duta Bangsa Surakarta (2021–2025)</span></span></div>
+        <div class="info-row"><span class="info-label">Thesis</span><span class="info-val" style="font-size:.82rem">Design & Development of a Sales Information System at Hero Farma Pharmacy</span></div>
         <div class="info-row"><span class="info-label">Location</span><span class="info-val">Klaten, Central Java, Indonesia</span></div>
         <div class="info-row"><span class="info-label">Email</span><span class="info-val">sanggita82@gmail.com</span></div>
         <div class="info-row"><span class="info-label">Phone</span><span class="info-val">+62 895-3911-6933</span></div>
-        <div class="info-row"><span class="info-label">Status</span><span class="info-val c-teal">Actively seeking opportunities</span></div>
-        <div class="info-row"><span class="info-label">Certification</span><span class="info-val"><span class="c-gold" style="font-weight:600">🏅 Junior Web Programmer</span><br>LSP Telematika</span></div>
+        <div class="info-row"><span class="info-label">Certification</span><span class="info-val"><span class="c-gold" style="font-weight:600">🏅 Junior Web Programmer</span><br><span style="color:var(--text3);font-size:.8rem">LSP Telematika · 2025–2028</span></span></div>
       </div>
       <div class="glance-card fi">
         <div>
           <div class="card-title" style="margin-bottom:1.2rem">At a Glance</div>
           <div class="stat-grid">
-            <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l">Projects Tested</div></div>
-            <div class="stat-box"><div class="stat-n">6</div><div class="stat-l">Months Industry</div></div>
-            <div class="stat-box"><div class="stat-n">5+</div><div class="stat-l">Stacks Mastered</div></div>
-            <div class="stat-box"><div class="stat-n">94%</div><div class="stat-l">Avg. Coverage</div></div>
+            <div class="stat-box"><div class="stat-n">3.93</div><div class="stat-l">GPA / 4.00</div></div>
+            <div class="stat-box"><div class="stat-n">2</div><div class="stat-l">Industry Roles</div></div>
+            <div class="stat-box"><div class="stat-n">3+</div><div class="stat-l">Dev Projects</div></div>
+            <div class="stat-box"><div class="stat-n">3</div><div class="stat-l">Platforms Tested</div></div>
           </div>
         </div>
         <div class="quote-box">My fullstack background gives me an edge as a QA — I understand how systems work from the inside, which lets me find gaps that aren't visible from the outside.</div>
@@ -418,12 +453,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
     <div class="sec-eyebrow">02 — Skills</div>
     <h2 class="sec-heading">Areas of <span class="accent">Expertise</span></h2>
     <div class="skills-grid">
-      <div class="sk-card fi"><div class="sk-icon">🔍</div><h3>QA &amp; Testing</h3><div class="sk-sub">Core Competency</div><ul class="sk-list"><li>Manual Testing &amp; Test Case Design</li><li>Bug Reporting &amp; Root Cause Analysis</li><li>Regression &amp; Smoke Testing</li><li>User Acceptance Testing (UAT)</li><li>Test Plans &amp; Documentation</li></ul></div>
+      <div class="sk-card fi"><div class="sk-icon">🔍</div><h3>QA &amp; Testing</h3><div class="sk-sub">Core Competency</div><ul class="sk-list"><li>Manual Testing &amp; Test Case Design</li><li>Bug Reporting &amp; Root Cause Analysis</li><li>Regression &amp; Smoke Testing</li><li>User Acceptance Testing (UAT)</li><li>Cross-Platform &amp; Sync Testing</li></ul></div>
       <div class="sk-card fi"><div class="sk-icon">⚙️</div><h3>Testing Tools</h3><div class="sk-sub">Tools &amp; Frameworks</div><ul class="sk-list"><li>Postman — API Testing</li><li>Jira / Trello — Bug Tracking</li><li>Selenium (Basic)</li><li>Browser DevTools</li><li>Google Sheets — Test Matrices</li></ul></div>
-      <div class="sk-card fi"><div class="sk-icon">⚛️</div><h3>Frontend Knowledge</h3><div class="sk-sub">Technical Understanding</div><ul class="sk-list"><li>React.js — in-depth understanding</li><li>HTML5 &amp; CSS3</li><li>JavaScript (ES6+)</li><li>Responsive &amp; Cross-Browser Testing</li><li>UI/UX Validation</li></ul></div>
-      <div class="sk-card fi"><div class="sk-icon">🛠️</div><h3>Backend Knowledge</h3><div class="sk-sub">System Testing Depth</div><ul class="sk-list"><li>Laravel &amp; PHP</li><li>MySQL — Query &amp; Data Testing</li><li>RESTful API Validation</li><li>Authentication Flow Testing</li><li>Data Integrity Verification</li></ul></div>
+      <div class="sk-card fi"><div class="sk-icon">⚛️</div><h3>Frontend</h3><div class="sk-sub">Development Knowledge</div><ul class="sk-list"><li>React.js — in-depth understanding</li><li>HTML5 &amp; CSS3</li><li>JavaScript (ES6+)</li><li>Leaflet — Map Integration</li><li>Responsive &amp; Cross-Browser Testing</li></ul></div>
+      <div class="sk-card fi"><div class="sk-icon">🛠️</div><h3>Backend</h3><div class="sk-sub">System Testing Depth</div><ul class="sk-list"><li>Laravel &amp; PHP</li><li>MySQL — Query &amp; Data Testing</li><li>RESTful API Validation</li><li>Authentication Flow Testing</li><li>Data Integrity Verification</li></ul></div>
       <div class="sk-card fi"><div class="sk-icon">📋</div><h3>Documentation</h3><div class="sk-sub">Reporting &amp; Communication</div><ul class="sk-list"><li>Technical Writing</li><li>Bug Report Writing</li><li>Test Summary Reports</li><li>Professional Communication</li><li>Editorial &amp; Review Skills</li></ul></div>
-      <div class="sk-card fi"><div class="sk-icon">🎨</div><h3>Support Tools</h3><div class="sk-sub">Productivity &amp; Design</div><ul class="sk-list"><li>Canva &amp; Figma (Basic Review)</li><li>Microsoft Office Suite</li><li>Google Workspace</li><li>Prototype Review</li><li>Requirements Analysis</li></ul></div>
+      <div class="sk-card fi"><div class="sk-icon">🎨</div><h3>Support Tools</h3><div class="sk-sub">Productivity &amp; Design</div><ul class="sk-list"><li>Canva, Figma, Corel Draw</li><li>Microsoft Office Suite</li><li>Google Workspace</li><li>Capcut — Video Editing</li><li>Requirements Analysis</li></ul></div>
     </div>
   </div>
 </section>
@@ -433,33 +468,41 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
 <!-- PROJECTS -->
 <section id="projects" class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">03 — Projects</div>
-    <h2 class="sec-heading">QA <span class="accent">Case Studies</span></h2>
-    <div class="projects-stack">
+    <div class="sec-eyebrow">03 — Projects &amp; Case Studies</div>
+    <h2 class="sec-heading" style="margin-bottom:1.5rem">Work &amp; <span class="accent">Portfolio</span></h2>
 
-      <!-- 04 FEATURED -->
+    <!-- Tab switcher -->
+    <div class="section-tabs">
+      <button class="s-tab active" onclick="switchTab('qa',this)">🔍 QA Case Study</button>
+      <button class="s-tab" onclick="switchTab('dev',this)">⚙️ Dev Projects</button>
+    </div>
+
+    <!-- QA TAB -->
+    <div id="tab-qa" class="projects-stack">
       <div class="pj pj-featured fi">
         <div class="pj-top">
-          <span class="pj-num">04</span>
+          <span class="pj-num">QA · 01</span>
           <span class="pj-title">Multi-Platform Bug Analysis — SaaS Attendance System</span>
-          <span class="pj-pill">Completed</span>
+          <span class="pj-company">Fingerspot.io Grup</span>
+          <span class="pj-pill">Active · Jan 2026</span>
         </div>
         <div class="pj-body">
           <div class="pj-left">
             <div class="platform-row">
-              <span class="pb pb-web">🌐 Web App</span>
+              <span class="pb pb-web">🌐 Web Dashboard</span>
               <span class="pb pb-desk">🖥️ Desktop App</span>
               <span class="pb pb-hw">⏱️ Attendance Device</span>
             </div>
-            <p class="pj-desc">Comprehensive bug analysis across three interconnected platforms for a SaaS company — covering the web-based admin dashboard, desktop client application, and physical fingerprint/RFID attendance machines. Focused on data synchronization accuracy, cross-platform consistency, and real-time attendance reporting integrity.</p>
+            <p class="pj-desc">Comprehensive bug analysis across three interconnected platforms for Fingerspot.io Grup — covering the web-based admin dashboard, desktop client application, and physical fingerprint/RFID attendance machines. Focused on data synchronization accuracy between devices and server, cross-platform behavioral consistency, and real-time attendance reporting integrity. This role involves ongoing testing cycles with structured documentation of all findings.</p>
             <div class="pj-tags">
               <span class="pj-tag">Bug Analysis</span>
-              <span class="pj-tag">Cross-Platform</span>
+              <span class="pj-tag">Cross-Platform Testing</span>
               <span class="pj-tag">SaaS</span>
               <span class="pj-tag">Postman</span>
               <span class="pj-tag">Jira</span>
               <span class="pj-tag">Hardware QA</span>
               <span class="pj-tag">API Sync Testing</span>
+              <span class="pj-tag">Data Integrity</span>
             </div>
           </div>
           <div class="pj-right">
@@ -471,6 +514,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
                 <li><span class="ck-ok">✓</span>Device–server data sync accuracy</li>
                 <li><span class="ck-ok">✓</span>Attendance record integrity &amp; reporting</li>
                 <li><span class="ck-ok">✓</span>API endpoint response validation</li>
+                <li><span class="ck-ok">✓</span>Real-time reporting accuracy</li>
                 <li><span class="ck-wn">⚠</span>Offline fallback — under review</li>
               </ul>
             </div>
@@ -486,82 +530,83 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- 01 -->
-      <div class="pj fi">
-        <div class="pj-top">
-          <span class="pj-num">01</span>
-          <span class="pj-title">Pharmacy Sales Information System</span>
-          <span class="pj-pill">Completed</span>
+    <!-- DEV PROJECTS TAB -->
+    <div id="tab-dev" class="dev-grid" style="display:none;">
+
+      <!-- Project 1: Pharmacy -->
+      <div class="dev-card fi">
+        <div class="dev-card-head">
+          <div>
+            <div class="dev-card-title">Pharmacy Sales Information System</div>
+            <div style="font-size:0.75rem;color:var(--text3);">Thesis Project · Hero Farma</div>
+          </div>
+          <div class="dev-card-year">2025</div>
         </div>
-        <div class="pj-body">
-          <div class="pj-left">
-            <p class="pj-desc">Comprehensive testing of a web-based pharmacy management application — covering sales workflows, real-time stock updates, and financial report accuracy with a user-friendly interface.</p>
-            <div class="pj-tags"><span class="pj-tag">Laravel</span><span class="pj-tag">React.js</span><span class="pj-tag">MySQL</span><span class="pj-tag">Postman</span></div>
+        <div class="dev-card-body">
+          <p class="dev-card-desc">Integrated web application for managing pharmacy sales, inventory tracking, and transaction management. Developed as the thesis project, focusing on building a reliable and user-friendly system for Hero Farma Pharmacy.</p>
+          <div class="dev-stack">
+            <span class="stack-tag st-laravel">Laravel</span>
+            <span class="stack-tag st-react">React.js</span>
+            <span class="stack-tag st-mysql">MySQL</span>
           </div>
-          <div class="pj-right">
-            <div>
-              <div class="panel-label">QA Checklist</div>
-              <ul class="checklist">
-                <li><span class="ck-ok">✓</span>Sales transaction functional flow</li>
-                <li><span class="ck-ok">✓</span>Stock sync &amp; medication accuracy</li>
-                <li><span class="ck-ok">✓</span>Report data integrity validation</li>
-                <li><span class="ck-ok">✓</span>Cross-browser UI compatibility</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="dev-feats">
+            <li>Sales transaction management with real-time stock updates</li>
+            <li>Inventory control with medication tracking</li>
+            <li>Financial report generation and data integrity validation</li>
+            <li>User-friendly interface with cross-browser compatibility</li>
+          </ul>
         </div>
       </div>
 
-      <!-- 02 -->
-      <div class="pj fi">
-        <div class="pj-top">
-          <span class="pj-num">02</span>
-          <span class="pj-title">MAXNET Customer Registration System</span>
-          <span class="pj-pill">Completed</span>
+      <!-- Project 2: Tax -->
+      <div class="dev-card fi">
+        <div class="dev-card-head">
+          <div>
+            <div class="dev-card-title">Tax Consultation &amp; Service Sales System</div>
+            <div style="font-size:0.75rem;color:var(--text3);">Web Application</div>
+          </div>
+          <div class="dev-card-year">2025</div>
         </div>
-        <div class="pj-body">
-          <div class="pj-left">
-            <p class="pj-desc">QA validation of an ISP customer registration platform featuring geolocation-based distance measurement using Leaflet to automatically identify the nearest Wi-Fi pole.</p>
-            <div class="pj-tags"><span class="pj-tag">Laravel</span><span class="pj-tag">React.js</span><span class="pj-tag">Leaflet</span><span class="pj-tag">MySQL</span></div>
+        <div class="dev-card-body">
+          <p class="dev-card-desc">Web-based system to streamline tax consultation services and manage service sales workflows. Designed for efficient client data management, billing calculation, and end-to-end consultation process tracking.</p>
+          <div class="dev-stack">
+            <span class="stack-tag st-laravel">Laravel</span>
+            <span class="stack-tag st-mysql">MySQL</span>
           </div>
-          <div class="pj-right">
-            <div>
-              <div class="panel-label">QA Checklist</div>
-              <ul class="checklist">
-                <li><span class="ck-ok">✓</span>Geolocation map accuracy testing</li>
-                <li><span class="ck-ok">✓</span>Form validation &amp; edge cases</li>
-                <li><span class="ck-ok">✓</span>API response integrity checks</li>
-                <li><span class="ck-ok">✓</span>Mobile &amp; responsive testing</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="dev-feats">
+            <li>Client data management with secure access control</li>
+            <li>End-to-end consultation workflow management</li>
+            <li>Billing calculation and invoice generation</li>
+            <li>Service sales tracking and reporting</li>
+          </ul>
         </div>
       </div>
 
-      <!-- 03 -->
-      <div class="pj fi">
-        <div class="pj-top">
-          <span class="pj-num">03</span>
-          <span class="pj-title">Tax Consulting &amp; Services System</span>
-          <span class="pj-pill">Completed</span>
+      <!-- Project 3: MAXNET -->
+      <div class="dev-card fi">
+        <div class="dev-card-head">
+          <div>
+            <div class="dev-card-title">MAXNET Customer Registration System</div>
+            <div style="font-size:0.75rem;color:var(--text3);">PT. Lingkar Kabel Telekomunikasi</div>
+          </div>
+          <div class="dev-card-year">2024</div>
         </div>
-        <div class="pj-body">
-          <div class="pj-left">
-            <p class="pj-desc">Testing of a web-based system for managing tax consultation services and billing workflows. Focus on client data security, workflow completeness, and calculation validation.</p>
-            <div class="pj-tags"><span class="pj-tag">Laravel</span><span class="pj-tag">MySQL</span><span class="pj-tag">Postman</span></div>
+        <div class="dev-card-body">
+          <p class="dev-card-desc">Customer Registration Information System built for MAXNET ISP, featuring geolocation-based distance measurement using Leaflet to automatically identify the nearest Wi-Fi pole and streamline the registration process.</p>
+          <div class="dev-stack">
+            <span class="stack-tag st-laravel">Laravel</span>
+            <span class="stack-tag st-react">React.js</span>
+            <span class="stack-tag st-mysql">MySQL</span>
+            <span class="stack-tag st-leaflet">Leaflet</span>
           </div>
-          <div class="pj-right">
-            <div>
-              <div class="panel-label">QA Checklist</div>
-              <ul class="checklist">
-                <li><span class="ck-ok">✓</span>Client data integrity verified</li>
-                <li><span class="ck-ok">✓</span>End-to-end consultation flow</li>
-                <li><span class="ck-ok">✓</span>Billing calculation validation</li>
-                <li><span class="ck-wn">⚠</span>Security audit under review</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="dev-feats">
+            <li>Interactive map with geolocation for nearest pole detection</li>
+            <li>Customer registration form with full validation</li>
+            <li>API integration for real-time data management</li>
+            <li>Mobile responsive and cross-browser compatible</li>
+          </ul>
         </div>
       </div>
 
@@ -580,50 +625,78 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
       <div class="exp-sidebar">
         <div class="exp-sidebar-lbl">Positions</div>
         <div class="exp-tab active" onclick="showTab('e1',this)">
-          <div class="exp-tab-role">Software Engineer</div>
-          <div class="exp-tab-yr">Aug 2024 – Jan 2025</div>
+          <div class="exp-tab-role">QA Analyst</div>
+          <div class="exp-tab-co">Fingerspot.io Grup</div>
+          <div class="exp-tab-yr">Jan 2026 – Present</div>
         </div>
         <div class="exp-tab" onclick="showTab('e2',this)">
-          <div class="exp-tab-role">Editor-in-Chief</div>
-          <div class="exp-tab-yr">2023 – 2024</div>
+          <div class="exp-tab-role">Software Engineer</div>
+          <div class="exp-tab-co">MAXNET</div>
+          <div class="exp-tab-yr">Aug 2024 – Jan 2025</div>
         </div>
         <div class="exp-tab" onclick="showTab('e3',this)">
+          <div class="exp-tab-role">Editor-in-Chief</div>
+          <div class="exp-tab-co">Student Press UDB</div>
+          <div class="exp-tab-yr">2023 – 2024</div>
+        </div>
+        <div class="exp-tab" onclick="showTab('e4',this)">
           <div class="exp-tab-role">PR Division Member</div>
+          <div class="exp-tab-co">BEM Fak. Ilmu Komputer</div>
           <div class="exp-tab-yr">2023 – 2024</div>
         </div>
       </div>
       <div class="exp-content">
+
         <div class="exp-panel active" id="e1">
+          <div class="exp-period">January 2026 — Present</div>
+          <h3>Quality Assurance Analyst</h3>
+          <div class="exp-co">Fingerspot.io Grup</div>
+          <span class="exp-type-badge etb-work">Work Experience</span>
+          <ul class="exp-ul">
+            <li>Conducted comprehensive bug analysis across three interconnected platforms: web-based admin dashboard, desktop client application, and physical fingerprint/RFID attendance devices.</li>
+            <li>Focused on data synchronization accuracy between attendance devices and server, ensuring real-time reporting integrity and cross-platform consistency.</li>
+            <li>Documented and categorized bugs by severity (Critical, Major, Minor) with detailed reproduction steps and root cause analysis.</li>
+            <li>Validated API endpoints using Postman and tracked all findings through Jira for timely resolution by the development team.</li>
+          </ul>
+        </div>
+
+        <div class="exp-panel" id="e2">
           <div class="exp-period">August 2024 — January 2025</div>
           <h3>Software Engineer</h3>
           <div class="exp-co">PT. Lingkar Kabel Telekomunikasi — MAXNET · Klaten</div>
+          <span class="exp-type-badge etb-work">Internship</span>
           <ul class="exp-ul">
-            <li>Developed and tested a web-based customer registration system using React.js and Laravel — managing the full QA cycle from test case creation through to bug resolution.</li>
-            <li>Conducted functional, regression, and integration testing on every new feature prior to production deployment.</li>
+            <li>Developed a web-based customer registration system for MAXNET using React.js and Laravel, ensuring efficient and user-friendly data management.</li>
+            <li>Managed the full QA cycle from test case creation through to bug resolution on every new feature prior to production deployment.</li>
             <li>Handled production incidents and validated fixes against pre-defined acceptance criteria.</li>
             <li>Monitored system stability and documented recurring issues to drive continuous improvement.</li>
           </ul>
         </div>
-        <div class="exp-panel" id="e2">
+
+        <div class="exp-panel" id="e3">
           <div class="exp-period">2023 — 2024</div>
           <h3>Editor-in-Chief</h3>
           <div class="exp-co">Student Press — Universitas Duta Bangsa Surakarta</div>
+          <span class="exp-type-badge etb-org">Organization</span>
           <ul class="exp-ul">
+            <li>Led the editorial team in content planning, development, and publication to ensure high-quality outputs aligned with publication standards.</li>
             <li>Applied quality control principles to editorial work — reviewing every piece for accuracy, clarity, and consistency before publication.</li>
-            <li>Led a team of writers using a structured review process, mirroring QA sign-off workflows.</li>
-            <li>Managed the full editorial pipeline from content planning through to final distribution.</li>
+            <li>Managed the full editorial pipeline from content planning through to final distribution, mirroring QA sign-off workflows.</li>
           </ul>
         </div>
-        <div class="exp-panel" id="e3">
+
+        <div class="exp-panel" id="e4">
           <div class="exp-period">2023 — 2024</div>
           <h3>Internal PR Division Member</h3>
-          <div class="exp-co">Faculty Student Executive Board — Universitas Duta Bangsa</div>
+          <div class="exp-co">Student Executive Board (BEM) — Faculty of Computer Science, Universitas Duta Bangsa</div>
+          <span class="exp-type-badge etb-org">Organization</span>
           <ul class="exp-ul">
-            <li>Managed faculty-wide internal communications, ensuring information accuracy and timely distribution.</li>
+            <li>Managed faculty-wide internal communications, ensuring information accuracy and timely distribution across all departments.</li>
             <li>Supported events through publication coordination and cross-organizational collaboration.</li>
-            <li>Strengthened inter-organizational relationships through structured communication practices.</li>
+            <li>Strengthened inter-organizational relationships through structured communication practices and consistent follow-through.</li>
           </ul>
         </div>
+
       </div>
     </div>
   </div>
@@ -642,6 +715,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
         <div>
           <div class="cert-name">Junior Web Programmer</div>
           <div class="cert-issuer">Lembaga Sertifikasi Profesi Telematika (LSP Telematika)</div>
+          <div class="cert-period">Valid: 2025 – 2028</div>
+          <div style="font-size:0.78rem;color:var(--text2);margin-bottom:0.7rem;line-height:1.5;">Implemented UI development, structured programming, and coding best practices. Covers front-end development standards and professional software delivery.</div>
           <div class="cert-tags">
             <span class="ct ct-teal">Official Certification</span>
             <span class="ct ct-gold">Verified</span>
@@ -676,34 +751,45 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:1.8r
 
 <footer>
   <div class="ft-l">© 2025 <strong>Sanggita Erinne Widyastami Suwito</strong> · Klaten, Central Java</div>
-  <div class="ft-r">QA Analyst · B.Sc. Information Systems</div>
+  <div class="ft-r">QA Analyst · B.Sc. Information Systems · GPA 3.93</div>
 </footer>
 
 <script>
-function showTab(id,el){
-  document.querySelectorAll('.exp-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('active'));
+function showTab(id, el) {
+  document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.exp-tab').forEach(t => t.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   el.classList.add('active');
 }
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach((e,i)=>{
-    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('show'),i*75);obs.unobserve(e.target);}
+
+function switchTab(type, el) {
+  document.querySelectorAll('.s-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-qa').style.display = type === 'qa' ? 'flex' : 'none';
+  document.getElementById('tab-qa').style.flexDirection = 'column';
+  document.getElementById('tab-dev').style.display = type === 'dev' ? 'grid' : 'none';
+}
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('show'), i * 75); obs.unobserve(e.target); }
   });
-},{threshold:0.07,rootMargin:'0px 0px -28px 0px'});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
+}, { threshold: 0.07, rootMargin: '0px 0px -28px 0px' });
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
     e.preventDefault();
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-window.addEventListener('scroll',()=>{
-  let cur='';
-  document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id;});
-  document.querySelectorAll('.nav-links a:not(.cta)').forEach(a=>{
-    a.style.color=a.getAttribute('href')?.slice(1)===cur?'var(--teal)':'';
+
+window.addEventListener('scroll', () => {
+  let cur = '';
+  document.querySelectorAll('section[id]').forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+  document.querySelectorAll('.nav-links a:not(.cta)').forEach(a => {
+    a.style.color = a.getAttribute('href')?.slice(1) === cur ? 'var(--teal)' : '';
   });
 });
 </script>
